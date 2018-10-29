@@ -15,7 +15,6 @@ public class DataDiferencaDiasMatcher extends TypeSafeMatcher<Date> {
 		this.qtdDias = qtdDias;
 	}
 
-	@Override
 	public void describeTo(Description description) {
 		// TODO Auto-generated method stub
 
