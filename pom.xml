@@ -4,6 +4,25 @@
   <artifactId>TestesUnitarios</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
+  <build>
+  	<testSourceDirectory>src</testSourceDirectory>
+  	<plugins>
+  		<plugin>
+  			<groupId>org.apache.maven.plugins</groupId>
+    		<artifactId>maven-surefire-plugin</artifactId>
+    		<version>2.22.1</version>
+    		<configuration>
+    		<includes>
+    			<include>br/ce/wcaquino/**/*.java</include>
+    		</includes>
+    			<threadCount>2</threadCount>
+    			<parallel>all</parallel>
+    			<useUnlimitedThreads>true</useUnlimitedThreads>
+    		</configuration>
+  		</plugin>
+  	</plugins>
+  </build>
+  
   <dependencies>
   	<dependency>
     	<groupId>junit</groupId>
@@ -26,4 +45,8 @@
     	<version>1.7.4</version>  
 	</dependency>
   </dependencies>
+	<properties>
+ 		<maven.compiler.source>1.6</maven.compiler.source>
+  		<maven.compiler.target>1.6</maven.compiler.target>
+	</properties>
 </project>
